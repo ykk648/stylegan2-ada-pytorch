@@ -1,3 +1,23 @@
+## command
+
+```shell
+# data preprocess
+python dataset_tool.py --source=** --dest=**
+
+# train
+python train.py --outdir=** --data=** --gpus=1 --metrics=none --snap=20 --mirror=1 --resume=**.pkl
+
+# generate
+python generate.py --trunc 1 --seeds=0-100 --outdir=./output/ --network=**.pkl
+
+# projector
+python projector.py --outdir=out --target=**.png --network=**.pkl
+
+# mix
+python style_mixing_single_img.py --outdir=out --cols=55,821,1789,293 --network=**.pkl --styles 0-14
+```
+
+
 ## StyleGAN2-ADA &mdash; Official PyTorch implementation
 
 ![Teaser image](./docs/stylegan2-ada-teaser-1024x252.png)
